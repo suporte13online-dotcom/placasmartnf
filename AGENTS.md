@@ -28,3 +28,7 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Project architecture
+- Keep the single commercial page at the index route with same-page section anchors; the catalogue and contact belong to one conversion journey.
+- Serve original uploaded product photographs through asset pointers and send enquiries directly to WhatsApp; no account or data storage is needed for this page.
