@@ -8,6 +8,8 @@ import google from "@/assets/google.jpg.asset.json";
 import instagram from "@/assets/instagram.jpg.asset.json";
 import cardapio from "@/assets/cardapio.jpg.asset.json";
 import pix from "@/assets/pix.jpg.asset.json";
+import videoApresentacao from "@/assets/video-apresentacao.mp4.asset.json";
+import videoPoster from "@/assets/video-apresentacao-poster.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({ meta: [
@@ -68,6 +70,19 @@ function Index() {
         <div className="container-page">
           <div className="catalog-top"><div><span className="eyebrow">CONEXÕES INTELIGENTES, POSSIBILIDADES REAIS</span><h2 className="section-heading">Uma plaquinha.<br />Novas possibilidades.</h2></div><p className="paper-description">Escolha a solução que combina com o seu negócio. Mais facilidade para seus clientes, mais oportunidades para você.</p></div>
           <div className="product-grid">{products.map(product => <article key={product.name} className="product"><img className={`product-photo ${product.name === "Google" ? "google" : ""}`} src={product.image} alt={`Plaquinha inteligente ${product.name} com NFC e QR Code${product.name === "Google" ? ", modelos azul e preto" : ""}`} loading="lazy" /><div className="product-body"><span className="product-tag">{product.tag}</span><h3>{product.name}</h3><p>{product.description}</p><a className="product-link" href={whatsappUrl(product.name)} target="_blank" rel="noopener noreferrer" aria-label={`Quero minha plaquinha ${product.name}`}>QUERO ESSA PLAQUINHA <ArrowUpRight size={17} /></a></div></article>)}</div>
+        </div>
+      </section>
+      <section id="em-acao" className="video-section">
+        <div className="container-page video-inner">
+          <div className="video-copy reveal">
+            <span className="eyebrow text-primary"><span className="eyebrow-dot" /> VEJA EM AÇÃO</span>
+            <h2 className="section-heading">A conexão acontece<br />em segundos.</h2>
+            <p className="video-description">Assista como é simples: o cliente aproxima o celular ou escaneia o QR Code da plaquinha e acessa na hora a avaliação, o perfil, o cardápio ou o Pix do seu negócio.</p>
+            <Button asChild variant="hero"><a href={whatsappUrl()} target="_blank" rel="noopener noreferrer"><MessageCircle /> QUERO MINHA PLAQUINHA <ArrowUpRight /></a></Button>
+          </div>
+          <div className="video-frame">
+            <video src={videoApresentacao.url} poster={videoPoster.url} autoPlay muted loop playsInline preload="metadata" aria-label="Vídeo mostrando a plaquinha inteligente PlacaSmartNF em uso" />
+          </div>
         </div>
       </section>
       <section id="como-funciona" className="how-section"><div className="container-page"><span className="eyebrow text-primary">TECNOLOGIA SIMPLES. EXPERIÊNCIA INTELIGENTE.</span><h2 className="section-heading">Um toque faz a conexão.</h2><div className="step-grid"><div className="step"><span className="step-number">01 / ESCOLHA</span><h3>A plaquinha certa para você</h3><p>Google, Instagram, Cardápio ou Pix. Escolha o modelo para a necessidade do seu negócio.</p></div><div className="step"><span className="step-number">02 / CONECTE</span><h3>Aproxime. Escaneie. Pronto.</h3><p>Seu cliente aproxima um celular compatível com NFC ou escaneia o QR Code da plaquinha.</p></div><div className="step"><span className="step-number">03 / TRANSFORME</span><h3>Uma experiência mais prática</h3><p>O acesso à avaliação, ao perfil, ao cardápio ou ao Pix fica à mão, sem complicação.</p></div></div></div></section>
