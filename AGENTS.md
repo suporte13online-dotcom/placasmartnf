@@ -32,3 +32,4 @@ use the editor.
 ## Project architecture
 - Keep the single commercial page at the index route with same-page section anchors; the catalogue and contact belong to one conversion journey.
 - Serve original uploaded product photographs through asset pointers and send enquiries directly to WhatsApp; no account or data storage is needed for this page.
+- Resolve asset pointers through the shared media URL helper against the public Lovable origin so photos, posters and videos also load on external hosts without Lovable's asset proxy.
