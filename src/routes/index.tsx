@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { ArrowDown, ArrowUpRight, Check, Menu, MessageCircle, Nfc, QrCode, Smartphone, MapPin, X, Zap } from "lucide-react";
+import { ArrowDown, ArrowUpRight, Check, ChevronDown, Menu, MessageCircle, Nfc, QrCode, Smartphone, MapPin, X, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { whatsappUrl } from "@/lib/contact";
 import hero from "@/assets/hero.jpg.asset.json";
@@ -45,12 +45,13 @@ function Index() {
         <nav aria-label="Navegação principal" className="desktop-nav flex items-center gap-8">
           <a className="nav-link" href="#plaquinhas">Nossas plaquinhas</a>
           <a className="nav-link" href="#como-funciona">Como funciona</a>
+          <a className="nav-link" href="#duvidas">Dúvidas</a>
           <Button asChild variant="hero"><a href={whatsappUrl()} target="_blank" rel="noopener noreferrer"><MessageCircle /> FALE COM A GENTE <ArrowUpRight /></a></Button>
         </nav>
         <div className="mobile-nav"><Button variant="ghost" size="icon" aria-label={menuOpen ? "Fechar menu" : "Abrir menu"} aria-expanded={menuOpen} onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? <X /> : <Menu />}</Button></div>
       </div>
     </header>
-    {menuOpen && <nav aria-label="Navegação móvel" className="mobile-nav border-b border-border bg-background px-5 py-5"><div className="flex flex-col gap-5"><a href="#plaquinhas" onClick={() => setMenuOpen(false)}>Nossas plaquinhas</a><a href="#como-funciona" onClick={() => setMenuOpen(false)}>Como funciona</a><a href="#contato" onClick={() => setMenuOpen(false)}>Fale com a gente</a></div></nav>}
+    {menuOpen && <nav aria-label="Navegação móvel" className="mobile-nav border-b border-border bg-background px-5 py-5"><div className="flex flex-col gap-5"><a href="#plaquinhas" onClick={() => setMenuOpen(false)}>Nossas plaquinhas</a><a href="#como-funciona" onClick={() => setMenuOpen(false)}>Como funciona</a><a href="#duvidas" onClick={() => setMenuOpen(false)}>Dúvidas</a><a href="#contato" onClick={() => setMenuOpen(false)}>Fale com a gente</a></div></nav>}
     <main>
       <section id="inicio" className="hero">
         <div className="container-page hero-inner">
