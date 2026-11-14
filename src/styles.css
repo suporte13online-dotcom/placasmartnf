@@ -207,9 +207,11 @@ h1,h2,h3,.brand { font-family: var(--font-display); letter-spacing: 0; }
 .video-inner { display: flex; align-items: center; justify-content: space-between; gap: 56px; }
 .video-copy { max-width: 520px; }
 .video-description { color: var(--muted-foreground); font-size: 14px; line-height: 1.8; margin: 18px 0 28px; max-width: 440px; }
+.video-stack { display: flex; flex-direction: column; align-items: center; gap: 34px; flex-shrink: 0; }
 .video-frame { position: relative; flex-shrink: 0; }
 .video-frame::before { content: ""; position: absolute; inset: -16%; background: radial-gradient(circle, oklch(0.9 0.19 96 / 16%), transparent 65%); }
-.video-frame video { position: relative; display: block; width: 280px; aspect-ratio: 9 / 16; object-fit: cover; border-radius: 26px; border: 1px solid var(--border); box-shadow: 0 0 0 8px var(--card), 0 30px 60px oklch(0 0 0 / 55%); }
+.video-frame video { position: relative; display: block; width: 224px; aspect-ratio: 9 / 16; object-fit: cover; border-radius: 26px; border: 1px solid var(--border); box-shadow: 0 0 0 8px var(--card), 0 30px 60px oklch(0 0 0 / 55%); }
+.video-caption { position: relative; margin-top: 15px; text-align: center; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted-foreground); }
 .how-section { padding: 75px 0; }
 .step-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 48px; margin-top: 44px; }
 .step { border-top: 1px solid var(--border); padding-top: 26px; }
@@ -239,7 +241,7 @@ h1,h2,h3,.brand { font-family: var(--font-display); letter-spacing: 0; }
   .hero-actions { gap: 10px; margin-top: 22px; } .hero-footnote { gap: 13px; font-size: 10px; margin-top: 18px; }
   .benefit-item { padding: 15px 0; font-size: 10px; gap: 8px; } .benefit-item svg { width: 19px; height: 19px; }
   .catalog,.how-section { padding: 50px 0; } .catalog-top { display: block; } .catalog-top p { margin-top: 18px; }
-  .video-section { padding: 50px 0; } .video-inner { flex-direction: column; gap: 40px; } .video-copy { max-width: 100%; } .video-frame video { width: min(240px, 68vw); }
+  .video-section { padding: 50px 0; } .video-inner { flex-direction: column; gap: 40px; } .video-copy { max-width: 100%; } .video-stack { gap: 26px; } .video-frame video { width: min(210px, 58vw); }
   .section-heading { font-size: 32px; } .product-grid { gap: 14px; margin-top: 25px; } .product-body { padding: 16px 12px; } .product h3 { font-size: 20px; } .product p { font-size: 11px; min-height: 80px; } .product-link { font-size: 10px; } .product-tag { font-size: 9px; }
   .step-grid { grid-template-columns: 1fr; gap: 27px; margin-top: 30px; } .step { padding-top: 20px; } .step h3 { margin-top: 12px; }
   .contact-section { padding: 45px 0; } .contact-inner { display: block; } .contact-section h2 { font-size: 31px; } .contact-inner > div:last-child { margin-top: 26px; }
