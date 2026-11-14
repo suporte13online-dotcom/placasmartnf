@@ -10,6 +10,8 @@ import cardapio from "@/assets/cardapio.jpg.asset.json";
 import pix from "@/assets/pix.jpg.asset.json";
 import videoApresentacao from "@/assets/video-apresentacao.mp4.asset.json";
 import videoPoster from "@/assets/video-apresentacao-poster.jpg.asset.json";
+import videoConexao from "@/assets/video-conexao.mp4.asset.json";
+import videoConexaoPoster from "@/assets/video-conexao-poster.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({ meta: [
@@ -80,8 +82,15 @@ function Index() {
             <p className="video-description">Assista como é simples: o cliente aproxima o celular ou escaneia o QR Code da plaquinha e acessa na hora a avaliação, o perfil, o cardápio ou o Pix do seu negócio.</p>
             <Button asChild variant="hero"><a href={whatsappUrl()} target="_blank" rel="noopener noreferrer"><MessageCircle /> QUERO MINHA PLAQUINHA <ArrowUpRight /></a></Button>
           </div>
-          <div className="video-frame">
-            <video src={videoApresentacao.url} poster={videoPoster.url} autoPlay muted loop playsInline preload="metadata" aria-label="Vídeo mostrando a plaquinha inteligente PlacaSmartNF em uso" />
+          <div className="video-stack">
+            <figure className="video-frame">
+              <video src={videoApresentacao.url} poster={videoPoster.url} autoPlay muted loop playsInline preload="metadata" aria-label="Vídeo apresentando os modelos de plaquinha inteligente PlacaSmartNF" />
+              <figcaption className="video-caption">Os modelos</figcaption>
+            </figure>
+            <figure className="video-frame">
+              <video src={videoConexao.url} poster={videoConexaoPoster.url} autoPlay muted loop playsInline preload="metadata" aria-label="Vídeo mostrando um celular conectando à plaquinha inteligente PlacaSmartNF" />
+              <figcaption className="video-caption">Na prática</figcaption>
+            </figure>
           </div>
         </div>
       </section>
