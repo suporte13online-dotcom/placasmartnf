@@ -218,6 +218,17 @@ h1,h2,h3,.brand { font-family: var(--font-display); letter-spacing: 0; }
 .step-number { color: var(--primary); font-family: var(--font-display); font-size: 13px; }
 .step h3 { font-size: 21px; margin: 18px 0 10px; font-weight: 600; }
 .step p { font-size: 13px; line-height: 1.8; color: var(--muted-foreground); }
+.faq-section { padding: 78px 0; }
+.faq-inner { display: flex; align-items: flex-start; gap: 64px; }
+.faq-intro { max-width: 380px; flex-shrink: 0; }
+.faq-description { color: var(--muted-foreground); font-size: 14px; line-height: 1.8; margin: 18px 0 28px; }
+.faq-list { flex: 1; display: flex; flex-direction: column; gap: 12px; }
+.faq-item { border: 1px solid var(--border); border-radius: 10px; background: var(--card); }
+.faq-item summary { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 18px 22px; font-size: 15px; font-weight: 600; cursor: pointer; list-style: none; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary svg { width: 18px; height: 18px; color: var(--primary); flex-shrink: 0; transition: transform .2s; }
+.faq-item[open] summary svg { transform: rotate(180deg); }
+.faq-item p { padding: 0 22px 20px; font-size: 13px; line-height: 1.8; color: var(--muted-foreground); }
 .contact-section { background: var(--primary); color: var(--primary-foreground); padding: 65px 0; }
 .contact-inner { display: flex; justify-content: space-between; align-items: center; gap: 40px; }
 .contact-section h2 { font-size: 39px; line-height: 1.15; font-weight: 700; max-width: 680px; margin: 16px 0; }
@@ -244,6 +255,7 @@ h1,h2,h3,.brand { font-family: var(--font-display); letter-spacing: 0; }
   .video-section { padding: 50px 0; } .video-inner { flex-direction: column; gap: 40px; } .video-copy { max-width: 100%; } .video-stack { gap: 26px; } .video-frame video { width: min(210px, 58vw); }
   .section-heading { font-size: 32px; } .product-grid { gap: 14px; margin-top: 25px; } .product-body { padding: 16px 12px; } .product h3 { font-size: 20px; } .product p { font-size: 11px; min-height: 80px; } .product-link { font-size: 10px; } .product-tag { font-size: 9px; }
   .step-grid { grid-template-columns: 1fr; gap: 27px; margin-top: 30px; } .step { padding-top: 20px; } .step h3 { margin-top: 12px; }
+  .faq-section { padding: 50px 0; } .faq-inner { flex-direction: column; gap: 32px; } .faq-intro { max-width: 100%; }
   .contact-section { padding: 45px 0; } .contact-inner { display: block; } .contact-section h2 { font-size: 31px; } .contact-inner > div:last-child { margin-top: 26px; }
   .footer-main { flex-direction: column; gap: 24px; } .footer-bottom { flex-direction: column; gap: 12px; }
 }

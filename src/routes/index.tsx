@@ -36,6 +36,15 @@ const products = [
   { name: "Pix", tag: "Mais agilidade", image: pix.url, description: "Deixe o acesso ao pagamento via Pix mais simples e prático para seus clientes." },
 ];
 
+const faqs = [
+  { q: "Funciona em qualquer celular?", a: "Sim. O QR Code funciona em qualquer celular com câmera, e o NFC funciona na maioria dos smartphones modernos, Android e iPhone." },
+  { q: "Precisa instalar algum aplicativo?", a: "Não. Ao aproximar o celular ou escanear o QR Code, o conteúdo abre direto na tela do cliente, sem baixar nada." },
+  { q: "A plaquinha precisa de bateria ou recarga?", a: "Não. A tecnologia NFC não usa bateria e não precisa de manutenção. É só posicionar a plaquinha e usar." },
+  { q: "O celular do cliente precisa de internet?", a: "Sim, para abrir a avaliação do Google, o perfil do Instagram, o cardápio ou o Pix." },
+  { q: "E se eu mudar o cardápio ou o perfil?", a: "A plaquinha é configurada para o seu negócio. Se precisar de algum ajuste, é só falar com a gente pelo WhatsApp." },
+  { q: "Quanto tempo a plaquinha dura?", a: "Ela é feita em material resistente e não tem validade: sem bateria e sem partes que desgastam com o uso." },
+];
+
 function Index() {
   const [menuOpen, setMenuOpen] = useState(false);
   return <>
@@ -96,6 +105,19 @@ function Index() {
         </div>
       </section>
       <section id="como-funciona" className="how-section"><div className="container-page"><span className="eyebrow text-primary">TECNOLOGIA SIMPLES. EXPERIÊNCIA INTELIGENTE.</span><h2 className="section-heading">Um toque faz a conexão.</h2><div className="step-grid"><div className="step"><span className="step-number">01 / ESCOLHA</span><h3>A plaquinha certa para você</h3><p>Google, Instagram, Cardápio ou Pix. Escolha o modelo para a necessidade do seu negócio.</p></div><div className="step"><span className="step-number">02 / CONECTE</span><h3>Aproxime. Escaneie. Pronto.</h3><p>Seu cliente aproxima um celular compatível com NFC ou escaneia o QR Code da plaquinha.</p></div><div className="step"><span className="step-number">03 / TRANSFORME</span><h3>Uma experiência mais prática</h3><p>O acesso à avaliação, ao perfil, ao cardápio ou ao Pix fica à mão, sem complicação.</p></div></div></div></section>
+      <section id="duvidas" className="faq-section">
+        <div className="container-page faq-inner">
+          <div className="faq-intro reveal">
+            <span className="eyebrow text-primary"><span className="eyebrow-dot" /> PERGUNTAS FREQUENTES</span>
+            <h2 className="section-heading">Ficou alguma dúvida?</h2>
+            <p className="faq-description">Reunimos as respostas para as perguntas mais comuns sobre as plaquinhas inteligentes.</p>
+            <Button asChild variant="heroOutline"><a href={whatsappUrl()} target="_blank" rel="noopener noreferrer"><MessageCircle /> FALAR COM O CÁSSIO</a></Button>
+          </div>
+          <div className="faq-list">
+            {faqs.map(faq => <details key={faq.q} className="faq-item"><summary>{faq.q}<ChevronDown aria-hidden="true" /></summary><p>{faq.a}</p></details>)}
+          </div>
+        </div>
+      </section>
       <section id="contato" className="contact-section"><div className="container-page contact-inner"><div><span className="eyebrow">PLACASMARTNF — TECNOLOGIA QUE CONECTA SEU NEGÓCIO!</span><h2>Seu negócio merece<br />essa conexão.</h2><p>Sua empresa merece uma experiência mais moderna, inteligente e profissional.<br />Modernize seu negócio com tecnologia!</p></div><div><Button asChild variant="ink"><a href={whatsappUrl()} target="_blank" rel="noopener noreferrer"><MessageCircle /> FALE COM UM ESPECIALISTA <ArrowUpRight /></a></Button><p className="mt-3 text-center">Cássio Domingos · (22) 98160-5225</p></div></div></section>
     </main>
     <footer className="site-footer"><div className="container-page"><div className="footer-main"><div><a href="#inicio" aria-label="PlacaSmartNF início"><Brand /></a><p className="mt-3 text-xs text-muted-foreground">Tecnologia que conecta seu negócio.</p></div><div className="footer-contact"><p className="font-semibold text-foreground">Vamos conectar seu negócio?</p><p>Responsável pelo atendimento: Cássio Domingos.</p><a href={whatsappUrl()} target="_blank" rel="noopener noreferrer">WhatsApp: (22) 98160-5225.</a><p>Atendimento em Nova Friburgo e região.</p></div></div><div className="footer-bottom"><p>© PlacaSmartNF. Todos os direitos reservados.</p><p className="font-semibold text-foreground">MODERNIZE. CONECTE. DESTAQUE-SE!</p></div></div></footer>
