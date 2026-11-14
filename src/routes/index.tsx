@@ -3,6 +3,7 @@ import { useState } from "react";
 import { ArrowDown, ArrowUpRight, Check, ChevronDown, Menu, MessageCircle, Nfc, QrCode, Smartphone, MapPin, X, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { whatsappUrl } from "@/lib/contact";
+import { mediaUrl } from "@/lib/media";
 import hero from "@/assets/hero.jpg.asset.json";
 import google from "@/assets/google.jpg.asset.json";
 import instagram from "@/assets/instagram.jpg.asset.json";
@@ -21,6 +22,8 @@ export const Route = createFileRoute("/")({
     { property: "og:description", content: "Tecnologia que conecta seu negócio. Conheça os modelos Google, Instagram, Cardápio e Pix." },
     { property: "og:type", content: "website" },
     { name: "twitter:card", content: "summary_large_image" },
+    { property: "og:image", content: mediaUrl(hero) },
+    { name: "twitter:image", content: mediaUrl(hero) },
   ] }),
   component: Index,
 });
@@ -30,10 +33,10 @@ function Brand() {
 }
 
 const products = [
-  { name: "Google", tag: "Mais avaliações", image: google.url, description: "Facilite as avaliações dos seus clientes e fortaleça a presença do seu negócio no Google." },
-  { name: "Instagram", tag: "Mais conexões", image: instagram.url, description: "Conecte seus clientes ao seu perfil e transforme cada visita em uma nova conexão." },
-  { name: "Cardápio", tag: "Mais praticidade", image: cardapio.url, description: "Seu cardápio digital ao alcance de um toque. Uma experiência prática à mesa." },
-  { name: "Pix", tag: "Mais agilidade", image: pix.url, description: "Deixe o acesso ao pagamento via Pix mais simples e prático para seus clientes." },
+  { name: "Google", tag: "Mais avaliações", image: mediaUrl(google), description: "Facilite as avaliações dos seus clientes e fortaleça a presença do seu negócio no Google." },
+  { name: "Instagram", tag: "Mais conexões", image: mediaUrl(instagram), description: "Conecte seus clientes ao seu perfil e transforme cada visita em uma nova conexão." },
+  { name: "Cardápio", tag: "Mais praticidade", image: mediaUrl(cardapio), description: "Seu cardápio digital ao alcance de um toque. Uma experiência prática à mesa." },
+  { name: "Pix", tag: "Mais agilidade", image: mediaUrl(pix), description: "Deixe o acesso ao pagamento via Pix mais simples e prático para seus clientes." },
 ];
 
 const faqs = [
@@ -64,7 +67,7 @@ function Index() {
     <main>
       <section id="inicio" className="hero">
         <div className="container-page hero-inner">
-          <img className="hero-photo" src={hero.url} alt="Apresentação das plaquinhas inteligentes Google, Cardápio, Pix e Instagram" fetchPriority="high" />
+          <img className="hero-photo" src={mediaUrl(hero)} alt="Apresentação das plaquinhas inteligentes Google, Cardápio, Pix e Instagram" fetchPriority="high" />
           <div className="hero-shade" />
           <div className="hero-copy reveal">
             <div className="eyebrow text-primary"><span className="eyebrow-dot" /> MODERNIZE SEU NEGÓCIO COM TECNOLOGIA!</div>
@@ -94,11 +97,11 @@ function Index() {
           </div>
           <div className="video-stack">
             <figure className="video-frame">
-              <video src={videoApresentacao.url} poster={videoPoster.url} autoPlay muted loop playsInline preload="metadata" aria-label="Vídeo apresentando os modelos de plaquinha inteligente PlacaSmartNF" />
+              <video src={mediaUrl(videoApresentacao)} poster={mediaUrl(videoPoster)} autoPlay muted loop playsInline preload="metadata" aria-label="Vídeo apresentando os modelos de plaquinha inteligente PlacaSmartNF" />
               <figcaption className="video-caption">Os modelos</figcaption>
             </figure>
             <figure className="video-frame">
-              <video src={videoConexao.url} poster={videoConexaoPoster.url} autoPlay muted loop playsInline preload="metadata" aria-label="Vídeo mostrando um celular conectando à plaquinha inteligente PlacaSmartNF" />
+              <video src={mediaUrl(videoConexao)} poster={mediaUrl(videoConexaoPoster)} autoPlay muted loop playsInline preload="metadata" aria-label="Vídeo mostrando um celular conectando à plaquinha inteligente PlacaSmartNF" />
               <figcaption className="video-caption">Na prática</figcaption>
             </figure>
           </div>
