@@ -3,9 +3,8 @@ export const purchaseConditions = {
   includedServices: ["Personalização", "Configuração"],
   paymentMethods: ["Pix", "Cartão", "Parcelamento"],
   delivery: {
-    maxBusinessDays: 3,
-    orderChannel: "site",
     region: "Nova Friburgo e região",
+    note: "Entregas combinadas diretamente com o cliente, conforme disponibilidade do produto e programação de entrega.",
   },
 } as const;
 
