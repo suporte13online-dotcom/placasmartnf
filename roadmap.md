@@ -8,3 +8,4 @@
 - [x] Add FAQ section ("Dúvidas") between "Como funciona" and contact, with nav links.
 - [ ] (Open, blocked) Deploy to Vercel — needs Git sync (Settings → Git) then Vercel import; no Vercel access from chat.
 - [x] Add "DINÂMICO" to the hero title only (user confirmed scope: big title, nothing else on the page).
+- [x] Replace the delivery line with "Atendemos Nova Friburgo e região" plus deliveries arranged with the client.
