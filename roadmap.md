@@ -1,4 +1,5 @@
 # Tasks
+- [ ] Show approved per-model pricing and purchase conditions, and verify the WhatsApp journey.
 - [ ] Make photo and video addresses portable to GitHub/Vercel and verify media loads.
 - [x] Build the PlacaSmartNF page using the supplied identity, photographs and WhatsApp contact.
 - [x] Verify catalogue, contact links and desktop/mobile display.
