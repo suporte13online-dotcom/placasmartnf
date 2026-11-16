@@ -71,7 +71,7 @@ function Index() {
           <div className="hero-shade" />
           <div className="hero-copy reveal">
             <div className="eyebrow text-primary"><span className="eyebrow-dot" /> MODERNIZE SEU NEGÓCIO COM TECNOLOGIA!</div>
-            <h1>PLAQUINHAS<br /><em>INTELIGENTES</em><br />NFC E QR CODE</h1>
+            <h1>PLAQUINHAS<br /><em>INTELIGENTES</em><br />NFC E QR CODE<br />DINÂMICO</h1>
             <p className="hero-slogan">Tecnologia que conecta seu negócio.</p>
             <p className="hero-description">Facilite a experiência dos seus clientes com soluções inteligentes para avaliações no Google, seguidores no Instagram, cardápios digitais e pagamentos via Pix.</p>
             <div className="hero-actions"><Button asChild variant="hero"><a href="#plaquinhas">CONHEÇA NOSSAS PLAQUINHAS <ArrowDown /></a></Button><Button asChild variant="heroOutline"><a href={whatsappUrl()} target="_blank" rel="noopener noreferrer"><MessageCircle /> FALE COM UM ESPECIALISTA</a></Button></div>
