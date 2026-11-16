@@ -11,11 +11,10 @@ describe("Approved purchase conditions", () => {
   it("accepts Pix, cards and installments", () => {
     expect(purchaseConditions.paymentMethods).toEqual(["Pix", "Cartão", "Parcelamento"]);
   });
-  it("delivers site orders within up to 3 business days", () => {
-    expect(purchaseConditions.delivery.maxBusinessDays).toBe(3);
-    expect(purchaseConditions.delivery.orderChannel).toBe("site");
-  });
-  it("serves Nova Friburgo and region", () => {
+  it("serves Nova Friburgo and region with deliveries arranged with the client", () => {
     expect(purchaseConditions.delivery.region).toBe("Nova Friburgo e região");
+    expect(purchaseConditions.delivery.note).toBe(
+      "Entregas combinadas diretamente com o cliente, conforme disponibilidade do produto e programação de entrega.",
+    );
   });
 });
