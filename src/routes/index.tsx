@@ -1,9 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { ArrowDown, ArrowUpRight, Check, ChevronDown, Menu, MessageCircle, Nfc, QrCode, Smartphone, MapPin, X, Zap } from "lucide-react";
+import { ArrowDown, ArrowUpRight, Check, ChevronDown, CreditCard, Menu, MessageCircle, Nfc, QrCode, Smartphone, MapPin, Truck, X, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { whatsappUrl } from "@/lib/contact";
 import { mediaUrl } from "@/lib/media";
+import { plaquePrice, purchaseConditions } from "@/lib/purchase";
 import hero from "@/assets/hero.jpg.asset.json";
 import google from "@/assets/google.jpg.asset.json";
 import instagram from "@/assets/instagram.jpg.asset.json";
@@ -84,7 +85,17 @@ function Index() {
       <section id="plaquinhas" className="catalog">
         <div className="container-page">
           <div className="catalog-top"><div><span className="eyebrow">CONEXÕES INTELIGENTES, POSSIBILIDADES REAIS</span><h2 className="section-heading">Uma plaquinha.<br />Novas possibilidades.</h2></div><p className="paper-description">Escolha a solução que combina com o seu negócio. Mais facilidade para seus clientes, mais oportunidades para você.</p></div>
-          <div className="product-grid">{products.map(product => <article key={product.name} className="product"><img className={`product-photo ${product.name === "Google" ? "google" : ""}`} src={product.image} alt={`Plaquinha inteligente ${product.name} com NFC e QR Code${product.name === "Google" ? ", modelos azul e preto" : ""}`} loading="lazy" /><div className="product-body"><span className="product-tag">{product.tag}</span><h3>{product.name}</h3><p>{product.description}</p><a className="product-link" href={whatsappUrl(product.name)} target="_blank" rel="noopener noreferrer" aria-label={`Quero minha plaquinha ${product.name}`}>QUERO ESSA PLAQUINHA <ArrowUpRight size={17} /></a></div></article>)}</div>
+          <div className="product-grid">{products.map(product => <article key={product.name} className="product"><img className={`product-photo ${product.name === "Google" ? "google" : ""}`} src={product.image} alt={`Plaquinha inteligente ${product.name} com NFC e QR Code${product.name === "Google" ? ", modelos azul e preto" : ""}`} loading="lazy" /><div className="product-body"><span className="product-tag">{product.tag}</span><h3>{product.name}</h3><p>{product.description}</p><div className="product-pricing"><strong>{plaquePrice}</strong><span>{purchaseConditions.includedServices.join(" e ")} incluídas</span></div><a className="product-link" href={whatsappUrl(product.name)} target="_blank" rel="noopener noreferrer" aria-label={`Quero minha plaquinha ${product.name}`}>QUERO ESSA PLAQUINHA <ArrowUpRight size={17} /></a></div></article>)}</div>
+        </div>
+      </section>
+      <section id="condicoes" className="purchase-section" aria-labelledby="purchase-heading">
+        <div className="container-page">
+          <div className="purchase-top"><div><span className="eyebrow text-primary">DO SEU JEITO, PRONTA PARA CONECTAR</span><h2 id="purchase-heading" className="section-heading">Condições de compra</h2></div><Button asChild variant="hero"><a href={whatsappUrl()} target="_blank" rel="noopener noreferrer"><MessageCircle /> PEDIR PELO WHATSAPP <ArrowUpRight /></a></Button></div>
+          <dl className="purchase-grid">
+            <div><dt><CreditCard aria-hidden="true" /> Pagamento</dt><dd>{purchaseConditions.paymentMethods.join(", ")}.</dd></div>
+            <div><dt><Truck aria-hidden="true" /> Entrega</dt><dd>Em até {purchaseConditions.delivery.maxBusinessDays} dias úteis para pedidos solicitados pelo {purchaseConditions.delivery.orderChannel}, em {purchaseConditions.delivery.region}.</dd></div>
+            <div><dt><Check aria-hidden="true" /> Incluído no valor</dt><dd>{purchaseConditions.includedServices.join(" e ")} da plaquinha.</dd></div>
+          </dl>
         </div>
       </section>
       <section id="em-acao" className="video-section">
