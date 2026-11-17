@@ -1,8 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { ArrowDown, ArrowUpRight, Check, ChevronDown, CreditCard, Menu, MessageCircle, Nfc, QrCode, Smartphone, MapPin, Truck, X, Zap } from "lucide-react";
+import { ArrowDown, ArrowUpRight, Check, ChevronDown, CreditCard, Instagram, Menu, MessageCircle, Nfc, QrCode, Smartphone, MapPin, Truck, X, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { whatsappUrl } from "@/lib/contact";
+import { instagramUrl, whatsappUrl } from "@/lib/contact";
 import { mediaUrl } from "@/lib/media";
 import { plaquePrice, purchaseConditions } from "@/lib/purchase";
 import hero from "@/assets/hero.jpg.asset.json";
@@ -59,12 +59,13 @@ function Index() {
           <a className="nav-link" href="#plaquinhas">Nossas plaquinhas</a>
           <a className="nav-link" href="#como-funciona">Como funciona</a>
           <a className="nav-link" href="#duvidas">Dúvidas</a>
+          <a className="nav-social" href={instagramUrl()} target="_blank" rel="noopener noreferrer" aria-label="Abrir o Instagram @consultorgoogle_"><Instagram /></a>
           <Button asChild variant="hero"><a href={whatsappUrl()} target="_blank" rel="noopener noreferrer"><MessageCircle /> FALE COM A GENTE <ArrowUpRight /></a></Button>
         </nav>
         <div className="mobile-nav"><Button variant="ghost" size="icon" aria-label={menuOpen ? "Fechar menu" : "Abrir menu"} aria-expanded={menuOpen} onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? <X /> : <Menu />}</Button></div>
       </div>
     </header>
-    {menuOpen && <nav aria-label="Navegação móvel" className="mobile-nav border-b border-border bg-background px-5 py-5"><div className="flex flex-col gap-5"><a href="#plaquinhas" onClick={() => setMenuOpen(false)}>Nossas plaquinhas</a><a href="#como-funciona" onClick={() => setMenuOpen(false)}>Como funciona</a><a href="#duvidas" onClick={() => setMenuOpen(false)}>Dúvidas</a><a href="#contato" onClick={() => setMenuOpen(false)}>Fale com a gente</a></div></nav>}
+    {menuOpen && <nav aria-label="Navegação móvel" className="mobile-nav border-b border-border bg-background px-5 py-5"><div className="flex flex-col gap-5"><a href="#plaquinhas" onClick={() => setMenuOpen(false)}>Nossas plaquinhas</a><a href="#como-funciona" onClick={() => setMenuOpen(false)}>Como funciona</a><a href="#duvidas" onClick={() => setMenuOpen(false)}>Dúvidas</a><a href="#contato" onClick={() => setMenuOpen(false)}>Fale com a gente</a><a href={instagramUrl()} target="_blank" rel="noopener noreferrer">Instagram @consultorgoogle_</a></div></nav>}
     <main>
       <section id="inicio" className="hero">
         <div className="container-page hero-inner">
@@ -132,8 +133,8 @@ function Index() {
           </div>
         </div>
       </section>
-      <section id="contato" className="contact-section"><div className="container-page contact-inner"><div><span className="eyebrow">PLACASMARTNF — TECNOLOGIA QUE CONECTA SEU NEGÓCIO!</span><h2>Seu negócio merece<br />essa conexão.</h2><p>Sua empresa merece uma experiência mais moderna, inteligente e profissional.<br />Modernize seu negócio com tecnologia!</p></div><div><Button asChild variant="ink"><a href={whatsappUrl()} target="_blank" rel="noopener noreferrer"><MessageCircle /> FALE COM UM ESPECIALISTA <ArrowUpRight /></a></Button><p className="mt-3 text-center">Cássio Domingos · (22) 98160-5225</p></div></div></section>
+      <section id="contato" className="contact-section"><div className="container-page contact-inner"><div><span className="eyebrow">PLACASMARTNF — TECNOLOGIA QUE CONECTA SEU NEGÓCIO!</span><h2>Seu negócio merece<br />essa conexão.</h2><p>Sua empresa merece uma experiência mais moderna, inteligente e profissional.<br />Modernize seu negócio com tecnologia!</p></div><div><Button asChild variant="ink"><a href={whatsappUrl()} target="_blank" rel="noopener noreferrer"><MessageCircle /> FALE COM UM ESPECIALISTA <ArrowUpRight /></a></Button><p className="mt-3 text-center">Cássio Domingos · (22) 98160-5225</p><a className="contact-instagram" href={instagramUrl()} target="_blank" rel="noopener noreferrer"><Instagram size={16} /> SEGUIR @consultorgoogle_</a></div></div></section>
     </main>
-    <footer className="site-footer"><div className="container-page"><div className="footer-main"><div><a href="#inicio" aria-label="PlacaSmartNF início"><Brand /></a><p className="mt-3 text-xs text-muted-foreground">Tecnologia que conecta seu negócio.</p></div><div className="footer-contact"><p className="font-semibold text-foreground">Vamos conectar seu negócio?</p><p>Responsável pelo atendimento: Cássio Domingos.</p><a href={whatsappUrl()} target="_blank" rel="noopener noreferrer">WhatsApp: (22) 98160-5225.</a><p>Atendimento em Nova Friburgo e região.</p></div></div><div className="footer-bottom"><p>© PlacaSmartNF. Todos os direitos reservados.</p><p className="font-semibold text-foreground">MODERNIZE. CONECTE. DESTAQUE-SE!</p></div></div></footer>
+    <footer className="site-footer"><div className="container-page"><div className="footer-main"><div><a href="#inicio" aria-label="PlacaSmartNF início"><Brand /></a><p className="mt-3 text-xs text-muted-foreground">Tecnologia que conecta seu negócio.</p></div><div className="footer-contact"><p className="font-semibold text-foreground">Vamos conectar seu negócio?</p><p>Responsável pelo atendimento: Cássio Domingos.</p><a href={whatsappUrl()} target="_blank" rel="noopener noreferrer">WhatsApp: (22) 98160-5225.</a><a href={instagramUrl()} target="_blank" rel="noopener noreferrer">Instagram: @consultorgoogle_.</a><p>Atendimento em Nova Friburgo e região.</p></div></div><div className="footer-bottom"><p>© PlacaSmartNF. Todos os direitos reservados.</p><p className="font-semibold text-foreground">MODERNIZE. CONECTE. DESTAQUE-SE!</p></div></div></footer>
   </>;
 }

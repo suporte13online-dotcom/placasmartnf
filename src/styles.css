@@ -172,6 +172,9 @@ h1,h2,h3,.brand { font-family: var(--font-display); letter-spacing: 0; }
 .brand-icon { color: var(--primary); margin-right: 10px; width: 29px; height: 29px; }
 .nav-link { font-size: 13px; color: var(--muted-foreground); transition: color .2s; }
 .nav-link:hover { color: var(--primary); }
+.nav-social { display: inline-flex; align-items: center; color: var(--muted-foreground); transition: color .2s; }
+.nav-social:hover { color: var(--primary); }
+.nav-social svg { width: 20px; height: 20px; }
 .hero { background: var(--hero-background); position: relative; overflow: hidden; }
 .hero-inner { min-height: 650px; position: relative; display: flex; align-items: center; }
 .hero-photo { position: absolute; width: 62%; height: 100%; right: -6%; object-fit: contain; object-position: right center; }
@@ -243,9 +246,12 @@ h1,h2,h3,.brand { font-family: var(--font-display); letter-spacing: 0; }
 .contact-inner { display: flex; justify-content: space-between; align-items: center; gap: 40px; }
 .contact-section h2 { font-size: 39px; line-height: 1.15; font-weight: 700; max-width: 680px; margin: 16px 0; }
 .contact-section p { font-size: 14px; line-height: 1.8; }
+.contact-instagram { display: inline-flex; align-items: center; justify-content: center; gap: 8px; margin-top: 14px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--primary-foreground); text-decoration: none; }
+.contact-instagram:hover { text-decoration: underline; }
 .site-footer { padding: 48px 0 24px; }
 .footer-main { display: flex; justify-content: space-between; gap: 32px; padding-bottom: 38px; }
 .footer-contact { font-size: 12px; line-height: 2; color: var(--muted-foreground); }
+.footer-contact a { display: block; }
 .footer-bottom { display: flex; justify-content: space-between; gap: 20px; border-top: 1px solid var(--border); padding-top: 24px; font-size: 10px; color: var(--muted-foreground); }
 .mobile-nav { display: none; }
 .reveal { animation: reveal .7s ease both; }
