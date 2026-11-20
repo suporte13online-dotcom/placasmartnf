@@ -10,3 +10,4 @@
 - [x] Add "DINÂMICO" to the hero title only (user confirmed scope: big title, nothing else on the page).
 - [x] Replace the delivery line with "Atendemos Nova Friburgo e região" plus deliveries arranged with the client.
 - [x] Link the official Instagram @consultorgoogle_ from the header, mobile menu, contact section and footer.
+- [x] Add the Wi-Fi plaque to the models section with its own photo, description and the R$ 100 price.

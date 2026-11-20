@@ -10,6 +10,7 @@ import google from "@/assets/google.jpg.asset.json";
 import instagram from "@/assets/instagram.jpg.asset.json";
 import cardapio from "@/assets/cardapio.jpg.asset.json";
 import pix from "@/assets/pix.jpg.asset.json";
+import wifi from "@/assets/wifi.jpg.asset.json";
 import videoApresentacao from "@/assets/video-apresentacao.mp4.asset.json";
 import videoPoster from "@/assets/video-apresentacao-poster.jpg.asset.json";
 import videoConexao from "@/assets/video-conexao.mp4.asset.json";
@@ -38,6 +39,7 @@ const products = [
   { name: "Instagram", tag: "Mais conexões", image: mediaUrl(instagram), description: "Conecte seus clientes ao seu perfil e transforme cada visita em uma nova conexão." },
   { name: "Cardápio", tag: "Mais praticidade", image: mediaUrl(cardapio), description: "Seu cardápio digital ao alcance de um toque. Uma experiência prática à mesa." },
   { name: "Pix", tag: "Mais agilidade", image: mediaUrl(pix), description: "Deixe o acesso ao pagamento via Pix mais simples e prático para seus clientes." },
+  { name: "Wi-Fi", tag: "Mais hospitalidade", image: mediaUrl(wifi), description: "Compartilhe a senha do seu Wi-Fi com um toque. Seus clientes conectam sozinhos, sem precisar perguntar." },
 ];
 
 const faqs = [

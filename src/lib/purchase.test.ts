@@ -1,9 +1,13 @@
 import { describe, expect, it } from "vitest";
-import { purchaseConditions } from "./purchase";
+import { plaquePrice, purchaseConditions } from "./purchase";
 
 describe("Approved purchase conditions", () => {
   it("charges R$ 100 per plaque", () => {
     expect(purchaseConditions.priceBrl).toBe(100);
+  });
+  it("shows the price as R$ 100 on every plaque card", () => {
+    // pt-BR currency formatting joins the symbol with a non-breaking space.
+    expect(plaquePrice.replace(/\u00a0/g, " ")).toBe("R$ 100");
   });
   it("includes personalization and configuration", () => {
     expect(purchaseConditions.includedServices).toEqual(["Personalização", "Configuração"]);
