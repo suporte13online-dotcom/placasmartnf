@@ -11,3 +11,4 @@
 - [x] Replace the delivery line with "Atendemos Nova Friburgo e região" plus deliveries arranged with the client.
 - [x] Link the official Instagram @consultorgoogle_ from the header, mobile menu, contact section and footer.
 - [x] Add the Wi-Fi plaque to the models section with its own photo, description and the R$ 100 price.
+- [x] Keep every model card the same width so the Wi-Fi plaque matches the others on phone and tablet.
